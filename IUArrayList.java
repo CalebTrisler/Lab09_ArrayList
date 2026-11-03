@@ -38,45 +38,52 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public void addToFront(E element) {
-		// TODO 
+		if(rear >= array.length) expandCapacity();
+		// shift array
+		for(int i = rear; i >= 0; i--) {
+			set(i, get(i-1));
+		}
+		set(0, element);
+		rear++;
+
 		modCount++; // DO NOT REMOVE ME
 		
 	}
 
 	@Override
 	public void addToRear(E element) {
-		// TODO 
+		// TODO Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public void add(E element) {
-		// TODO 
+		// TODO Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public void addAfter(E element, E target) {
-		// TODO 
+		// TODO Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public void add(int index, E element) {
-		// TODO 
+		// TODO Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public E removeFirst() {
-		// TODO 
+		remove(first());
 		modCount++; // DO NOT REMOVE ME
 		return null;
 	}
 
 	@Override
 	public E removeLast() {
-		// TODO 
+		remove(last());
 		modCount++; // DO NOT REMOVE ME
 		return null;
 	}
@@ -103,21 +110,20 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E remove(int index) {
-		// TODO 
+		remove(get(index));
 		modCount++; // DO NOT REMOVE ME
 		return null;
 	}
 
 	@Override
 	public void set(int index, E element) {
-		// TODO 
+		array[index] = element;
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public E get(int index) {
-		// TODO 
-		return null;
+		return array[index];
 	}
 
 	@Override
@@ -140,14 +146,14 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E first() {
-		// TODO 
-		return null;
+		if(isEmpty()) throw new NoSuchElementException();
+		return get(0);
 	}
 
 	@Override
 	public E last() {
-		// TODO 
-		return null;
+		if(isEmpty()) throw new NoSuchElementException();
+		return get(rear - 1);
 	}
 
 	@Override
@@ -157,20 +163,21 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO 
-		return false;
+		return size() == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO 
-		return 0;
+		return rear;
 	}
 
 	@Override
 	public String toString() {
 		String result = "[";
-		// TODO
+		for(int i = 0; i < rear; i++) {
+			result += get(i).toString();
+			if(i != rear - 1) result += ", ";
+		}
 		return result + "]";
 	}
 

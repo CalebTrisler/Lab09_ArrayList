@@ -175,19 +175,19 @@ public class ListTester {
 			// Scenario: 03
 		testSingleElementList(emptyList_addToRearA_A, "emptyList_addToRearA_A", LIST_A, STRING_A);
 			// Scenario: 04
-
+		// TODO
 			// Scenario: 05
-
+		// TODO
 			
 		//1-element to empty list
 			// Scenario: 12
 		testEmptyList(A_removeFirst_emptyList, "A_removeFirst_emptyList");
 			// Scenario: 13
-
+		// TODO
 			// Scenario: 14
 		testEmptyList(A_removeA_emptyList, "A_removeA_emptyList");
 			// Scenario: 15
-
+		// TODO
 			// Scenario: 44
 
 
@@ -209,13 +209,13 @@ public class ListTester {
 			
 		//2-element to 1-element
 			// Scenario: 25
-
+		// TODO
 			// Scenario: 26
 		testSingleElementList(AB_removeLast_A, "AB_removeLast_A", LIST_A, STRING_A);
 			// Scenario: 27
 
 			// Scenario: 28
-
+		// TODO
 			// Scenario: 29
 
 			// Scenario: 30
@@ -227,9 +227,9 @@ public class ListTester {
 			
 		//2-element to 3-element
 			// Scenario: 17
-
+		// TODO
 			// Scenario: 20 
-
+		// TODO
 			// Scenario: 23
 
 			
@@ -343,11 +343,11 @@ public class ListTester {
 	/** Scenario #04: [] -> add(A) -> [A] 
 	 * @return [A] after add(A)
 	 */
-
+//TODO: Scenario lambdas
 	/** Scenario #05: [] -> add(0, A) -> [A] 
 	 * @return [A] after add(0, A)
 	 */
-
+//TODO
 	/** Scenario #06: [A] -> addToFront(B) -> [B,A] 
 	 * @return [B,A] after addToFront(B)
 	 */
@@ -387,7 +387,7 @@ public class ListTester {
 	/** Scenario #13: [A] -> removeLast() -> [] 
 	 * @return [] after removeLast()
 	 */
-
+//TODO
 	/** Scenario #14: [A] -> remove(A) -> []
 	 * @return [] after remove(A)
 	 */
@@ -401,7 +401,7 @@ public class ListTester {
 	/** Scenario #15: [A] -> remove(0) -> [] 
 	 * @return [] after remove(0)
 	 */
-
+//TODO
 	 
 	/** Scenario #16: [A] -> set(0,B) -> [B] 
 	 * @return [B] after set(0,B)
@@ -411,12 +411,12 @@ public class ListTester {
 	/** Scenario #17: [A,B] -> addToFront(C) -> [C,A,B] 
 	 * @return [C,A,B] after addToFront(C)
 	 */
-
+// TODO
 	 
 	/** Scenario #20: [A,B] -> addAfter(C,B) -> [A,B,C] 
 	 * @return [A,B,C] after addAfter(C,B)
 	 */
-
+//TODO
 	 
 	/** Scenario #23: [A,B] -> add(1,C) -> [A,C,B] 
 	 * @return [A,C,B] after add(1,C)
@@ -426,7 +426,7 @@ public class ListTester {
 	/** Scenario #25: [A,B] -> removeFirst() -> [B]
 	 * @return [B] after removeFirst()
 	 */
-
+//TODO
 	 
 	/** Scenario #26: [A,B] -> removeLast() -> [A]
 	 * @return [A] after removeLast()
@@ -447,7 +447,7 @@ public class ListTester {
 	/** Scenario #28: [A,B] -> remove(B) -> [A]
 	 * @return [A] after remove(B)
 	 */
-
+//TODO
 	 
 	/** Scenario #29: [A,B] -> remove(0) -> [B]
 	 * @return [B] after remove(0)

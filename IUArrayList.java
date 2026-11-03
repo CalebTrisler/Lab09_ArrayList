@@ -52,40 +52,40 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public void addToRear(E element) {
-		// TODO Caleb
+		// TODO: Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public void add(E element) {
-		// TODO Caleb
+		// TODO: Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public void addAfter(E element, E target) {
-		// TODO Caleb
+		// TODO: Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public void add(int index, E element) {
-		// TODO Caleb
+		// TODO: Caleb
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public E removeFirst() {
-		remove(first());
+		E element = remove(first());
 		modCount++; // DO NOT REMOVE ME
-		return null;
+		return element;
 	}
 
 	@Override
 	public E removeLast() {
-		remove(last());
+		E element = remove(last());
 		modCount++; // DO NOT REMOVE ME
-		return null;
+		return element;
 	}
 
 	@Override
@@ -110,19 +110,25 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E remove(int index) {
-		remove(get(index));
+		if(index < 0 || index >= rear) throw new IndexOutOfBoundsException();
+
+		E element = remove(get(index));
 		modCount++; // DO NOT REMOVE ME
-		return null;
+		return element;
 	}
 
 	@Override
 	public void set(int index, E element) {
+		if(index < 0 || index >= rear) throw new IndexOutOfBoundsException();
+
 		array[index] = element;
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public E get(int index) {
+		if(index < 0 || index >= rear) throw new IndexOutOfBoundsException();
+
 		return array[index];
 	}
 
@@ -147,13 +153,13 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	@Override
 	public E first() {
 		if(isEmpty()) throw new NoSuchElementException();
-		return get(0);
+		return array[0];
 	}
 
 	@Override
 	public E last() {
 		if(isEmpty()) throw new NoSuchElementException();
-		return get(rear - 1);
+		return array[rear - 1];
 	}
 
 	@Override

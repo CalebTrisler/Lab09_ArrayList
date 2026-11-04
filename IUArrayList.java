@@ -154,7 +154,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 		if (isEmpty()) {
 			throw new NoSuchElementException();
 		}
-		return array[0];
+		return get(0);
 	}
 
 	@Override
@@ -162,7 +162,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 		if (isEmpty()) {
 			throw new NoSuchElementException();
 		}
-		return array[rear - 1];
+		return get(rear - 1);
 	}
 
 	@Override

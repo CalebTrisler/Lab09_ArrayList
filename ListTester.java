@@ -237,7 +237,7 @@ public class ListTester {
 		testThreeElementList(AB_addToFrontC_CAB, "AB_addToFrontC_CAB", LIST_CAB, STRING_CAB);
 			// Scenario: 20 
 		// TODO
-		testThreeElementList(AB_addAfterC_CAB, "AB_addAfterC_CAB", LIST_CAB, STRING_CAB);
+		testThreeElementList(AB_addAfterC_CAB, "AB_addAfterC_CAB", LIST_ABC, STRING_ABC);
 			// Scenario: 23
 
 			
@@ -883,6 +883,7 @@ public class ListTester {
 		System.out.printf("\nSCENARIO: %s\n\n", scenarioName);
 		try {
 			//TODO: tests for scenarios resulting in a 3-element list
+			
 			printTest(scenarioName + "_testAddToFront", testAddToFront(scenario.build(), ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddToRear", testAddToRear(scenario.build(), ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddAfterFirst", testAddAfter(scenario.build(), contents[0], ELEMENT_X, Result.NoException));

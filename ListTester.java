@@ -193,7 +193,8 @@ public class ListTester {
 
 		//1-element to 2-element
 			// Scenario: 06
-		
+			//[A] -> addToFront(B) -> [B,A]
+		testTwoElementList(A_addToFrontB_BA, "A_addToFrontB_BA", LIST_BA, STRING_BA);
 			// Scenario: 07
 		testTwoElementList(A_addToRearB_AB, "A_addToRearB_AB", LIST_AB, STRING_AB);
 			// Scenario: 10
@@ -325,7 +326,7 @@ public class ListTester {
 	 */
 	private IndexedUnsortedList<Integer> emptyList_addToFrontA_A() {
 		IndexedUnsortedList<Integer> list = newList();
-		list.add(ELEMENT_A);
+		list.addToFront(ELEMENT_A);
 		return list;
 	}
 	private Scenario<Integer> emptyList_addToFrontA_A = () -> emptyList_addToFrontA_A();
@@ -364,6 +365,12 @@ public class ListTester {
 	/** Scenario #06: [A] -> addToFront(B) -> [B,A] 
 	 * @return [B,A] after addToFront(B)
 	 */
+	private IndexedUnsortedList<Integer> A_addToFrontB_BA() {
+		IndexedUnsortedList<Integer> list = emptyList_addToFrontA_A(); 
+		list.addToFront(ELEMENT_B);
+		return list;
+	}
+	private Scenario<Integer> A_addToFrontB_BA = () -> A_addToFrontB_BA();
 
 	
 	/** Scenario #07: [A] -> addToRear(B) -> [A,B]

@@ -75,14 +75,12 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	@Override
 	public E removeFirst() {
 		E element = remove(first());
-		modCount++; // DO NOT REMOVE ME
 		return element;
 	}
 
 	@Override
 	public E removeLast() {
 		E element = remove(last());
-		modCount++; // DO NOT REMOVE ME
 		return element;
 	}
 
@@ -111,7 +109,6 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 		if(index < 0 || index >= rear) throw new IndexOutOfBoundsException();
 
 		E element = remove(get(index));
-		modCount++; // DO NOT REMOVE ME
 		return element;
 	}
 
